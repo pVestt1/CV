@@ -1,0 +1,37 @@
+
+<ul class="nav">
+    <!---- ! 1  <li (click)="liClickAbout()" [@openClose]="open ? true : false">
+        About 
+         
+    </li>--->
+    <li (click)="liClickAbout()"  >
+
+        <div @myInsertRemoveTrigger *ngIf="isShown;else unset" >
+            ADD
+        </div>
+        <ng-template #unset>  
+            <div @myInsertRemoveTrigger class="unset_01"></div>
+        </ng-template>   
+    </li>
+  
+    <li (click)="liClickNewHome()" >
+        <div @myInsertRemoveTrigger *ngIf="isShown1;else unset">
+            Home
+        </div>
+        <ng-template #unset>  
+            <div @myInsertRemoveTrigger class="unset_01"></div>
+        </ng-template>   
+    </li>
+
+    <li (click)="liClickNewUI()">
+       
+        <div @myInsertRemoveTrigger *ngIf="isShown2;else unset">
+            UI/UX
+        </div>
+        <ng-template #unset>  
+            <div @myInsertRemoveTrigger class="unset_01"></div>
+        </ng-template>   
+    </li>
+
+</ul>
+

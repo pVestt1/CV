@@ -1,0 +1,66 @@
+
+
+
+<div class="container">
+   
+    <div class="cont1">
+        <div class="text1">
+            <h1>Jon Snow</h1>
+            <p>resume / cv</p>
+        </div>
+
+        <div class="foto">
+            <div @img_01 *ngIf="open" class="img1">
+               
+            </div>
+          
+        </div>
+    </div>
+
+    <div class="cont2">
+        <section class="sec1">
+
+            <a  @download *ngIf="open" (click)="show = !show" >Download CV</a>
+
+            <div *ngIf="show" class="ngif_1">
+                   <!-- <span > 
+                     Resume / CV
+                      
+                    </span> -->
+                    <a href="../../assets/foto/bg_1.jpg" download> Resume / CV</a>
+                  
+            </div>
+            <a @vievCV *ngIf="open" routerLink="/resuneCV" routerLinkActive="active">Viev CV</a>
+                
+            
+        </section>
+        <section class="sec2">
+            <ul>
+                <li>
+                    <span @anim1 *ngIf="open">Сountry :</span>
+                    <strong>
+                         <span @text1 *ngIf="open"> Ukraina</span>  
+                         <span @text2 *ngIf="open"> Kiev</span>  
+                    </strong>
+                </li>
+                <li>
+                    <span @anim2 *ngIf="open">Contact :</span>
+                    <strong><a @text3 *ngIf="open" href="tel:0997770500">099 777 05 00</a></strong>
+                    
+                
+                    
+                </li>
+                <li>
+                    <span @anim1 *ngIf="open">Email :</span>
+                    <strong> <a  @text3 *ngIf="open" href="mailto: abc@example.com">abc@gmail.com</a> </strong>
+                    
+                </li>
+                <li>
+                    <span @anim2 *ngIf="open">Date of Birth :</span>
+                    <strong  @text3 *ngIf="open">01.05.1991</strong>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+</div>

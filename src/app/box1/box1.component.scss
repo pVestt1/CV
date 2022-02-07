@@ -1,0 +1,175 @@
+div.section_1 { 
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    background-image: url(../../assets/foto/car1.png);
+    transition-duration: 1s;
+    h2 {
+        font-size: 3.5em;
+        font-weight: lighter;
+        letter-spacing: -1px;
+        font-variant: small-caps slashed-zero;
+        font-family: 'Titillium Web', sans-serif;
+        text-align: right;
+        position: relative;
+        z-index:2;
+        
+    }
+    /*------------*/
+    a {
+        padding: 5px 45px;
+        border: none;
+        border-radius: 1%;
+        background-color: rgba(255, 235, 205, 0);
+        transition-duration: .3s;
+        z-index: 2;
+        position: relative;
+        left: 50px;
+        top: -50px;
+        font-size: 1.5em;
+        font-weight: bolder;
+        letter-spacing: .5px;
+        font-variant: small-caps slashed-zero;
+        font-family: 'Titillium Web', sans-serif;
+        cursor: pointer;
+        animation: 3s linear btn_opacity;
+    }
+    
+    a:hover {
+        background: rgba(0, 0, 0, 0.274);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.336) 0%, rgba(20,158,244,0.36458333333333337) 100%);
+    }
+    @keyframes btn_opacity {
+        0% {
+            opacity: 0;
+        }   
+        100% {
+            opacity: 1;
+        }
+    }
+    a:hover::after { 
+
+        animation:  but1 1s linear 0s alternate infinite none running ;
+        transition-duration: .2;
+        
+    }
+    a::after {
+        content: "";
+        display: inline-block;
+        padding-left: 20px;
+        width: 90px;
+        height: 1.1px;
+        background-color: rgba(255, 0, 0, 0);
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        transition-duration: .2;
+       
+    }
+    a::before {
+        content: "";
+        display: inline-block;
+        padding-left: 20px;
+        width: 100px;
+        height: 1.1px;
+        background-color: rgb(150, 54, 54);
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        transition-duration: .2;
+       
+    }
+    a:hover::before {
+        height: 0px;
+        transition-duration: .2;
+    }
+    @keyframes but1 {
+        0% {
+            
+            transform: translateX(0px);
+            opacity: 0;
+            background-color: black;
+            width: 20px;
+           
+        }
+        100% {
+            transform: translateX(50px);
+            opacity: 1;
+            background-color: white;
+           
+        }
+    }
+    /*-------------------*/
+    .svg1 {
+        //display: none;
+        position: absolute;
+        transform: translateX(0px);
+        animation:  svg1 1.5s ease-out 0s alternate infinite none running ;
+        opacity: 1;
+       
+        transition-duration: 1s;
+
+        stroke: rgba(255, 0, 0, 0);
+        stroke-width: 2;
+        z-index: 1;
+    }
+    .svg2 {
+        //display: none;
+        position: absolute;
+        transform: translateX(0px);
+        animation:  svg1 1.5s ease-out 0s alternate infinite none running ;
+        opacity: 1;
+       
+        transition-duration: 1s;
+
+        stroke: rgba(255, 0, 0, 0);
+        stroke-width: 1;
+        z-index: 1;
+        
+    }
+
+    //anime text svg button
+    @keyframes svg1 {
+        0% {
+            
+            transform: translateX(-350px);
+            opacity: 1;
+            stroke: rgb(214, 202, 202);
+           
+        }
+        100% {
+            transform: translateX(500px);
+            opacity: 1;
+        }
+    }
+
+/*------- desing 1--------*/
+
+div.desing_1 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    //background-color: red;
+    overflow: hidden;
+    z-index: 1;
+    div.num_0 {
+        width: 50%;
+        height: 800px;
+        background-color: rgba(83, 197, 212, 0.801);
+        background: radial-gradient(circle, rgba(83, 197, 212, 0.801) 0%, rgba(162, 182, 212, 0.732) 100%);
+        position: relative;
+        right: -60%;
+        transform: rotate(30deg);
+        z-index: -1;
+    }
+   
+}
+
+}
+div.section_1:hover {
+    background-position-x: 5%;
+
+}

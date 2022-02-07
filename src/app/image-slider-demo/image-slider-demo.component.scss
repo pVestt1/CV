@@ -1,0 +1,52 @@
+// div.test111 {
+//   width: 100%;
+//   height: 100%;
+//   //background-color: rgb(0, 0, 0);
+//   //background-image: url(../../assets/foto/The1.jpg);
+  
+// }
+
+div.test111 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(53, 32, 32, 0);
+  position: absolute;
+  top: 0px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  display: grid;
+  place-content: center;
+  z-index: 2;
+  button {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(255, 235, 205, 0.336);
+  }
+  div.test222 {
+    width: 1000px;
+    height: 500px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 1%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+   
+    ng-image-slider{
+      background-color: rgba(156, 187, 216, 0.171);
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 10px;
+      border-radius: 1%;
+    
+    }
+  }
+  //background-image: url(../../assets/foto/The1.jpg);
+  
+}
+

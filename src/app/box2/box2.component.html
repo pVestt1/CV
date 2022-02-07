@@ -1,0 +1,56 @@
+
+
+
+<div class="container">
+
+  
+
+    <div class="box01">
+
+        <!------- btn_test01     1 - time animation and func ------->
+        <h2 (click)="liClickAbout()" *ngIf="open"  routerLink="/formWrite" routerLinkActive="active">Write my</h2>
+
+       
+            <div @btn_test01 *ngIf="isShown;else unset" >
+             
+                <div class="svg_itm001" >
+
+                    <svg @SVG01 *ngIf="open"  width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M0.721819 18.6771L4.73682 1L17.5387 8.84996" stroke="black" stroke-linecap="round"/>
+                    </svg>
+                      
+                    <svg @SVG02 *ngIf="open" width="47" height="28" viewBox="0 0 47 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.02783 0.932129C4.46281 7.80393 9.9139 28.6168 46.3242 27.3673" stroke="black" stroke-linecap="round"/>
+                    </svg>
+
+                </div>
+
+            </div>
+            <ng-template #unset>  
+
+                <div class="unset_01">
+                   
+                    <h2 routerLink="/formWrite" routerLinkActive="active">Write my</h2>
+                    
+                </div>
+
+            </ng-template>   
+        <!----- end ----->
+
+
+
+    </div>
+
+    
+    <div class="box02">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, tempore. Neque, deserunt officiis.</p>
+        <small>Lorem ipsum dolor sit amet.</small>
+        
+    </div>
+
+
+
+   
+
+
+</div>

@@ -1,0 +1,146 @@
+
+
+<header>
+
+</header>
+
+
+<main>
+
+ 
+
+  
+
+
+
+  
+  <!---  Explore left button panel --->
+  <nav>
+       <!------ truck ------->
+       <div class="bg_truck1" @openClose6 *ngIf="open">
+         
+       </div>
+       <div class="bg_truck2" @openClose7 *ngIf="open">
+        
+       </div>
+
+      <!-------------->
+    <div class="desing">
+    
+
+      <div class="box0">
+        <div  class="itm0" @openClose *ngIf="open">
+
+         <app-box0></app-box0>
+          
+        </div>
+      </div>
+
+      <div class="box1">
+        <div routerLink="/slider" routerLinkActive="active" class="itm1" @openClose1 *ngIf="open">
+
+            <app-box1></app-box1>
+           
+        </div>
+      </div>
+
+      <div class="box2">
+        <div class="itm2" @openClose2 *ngIf="open">
+          
+          <app-box2></app-box2>
+
+        </div>
+      </div>
+
+      <div class="box3">
+        <div class="itm3" @openClose3 *ngIf="open">
+       
+        
+          
+            
+            
+        </div>
+      </div>
+
+      <div class="box4">
+        <div class="itm4" @openClose4 *ngIf="open">
+          
+        </div>
+      </div>
+
+      <div class="box5">
+        <div class="itm5" @openClose5 *ngIf="open">
+            <p>Lorem ipsum dolor sit</p>
+            <div class="itm00 foto00" title="instahram"></div>
+            <div class="itm00 foto01" title="linkedin"></div>
+            <div class="itm00 foto02" title="viber"></div>
+            <div class="itm00 foto03" title="whatsupp"></div>
+        </div>
+      </div>
+      
+    </div>
+    <!-------------->
+    <div class="cont1">
+      
+      <app-menu 
+
+        (sendAbout) = "catchAbout($event)"
+        (sendNewHome) = "catchNewHome($event)"
+        (sendNewUI) = "catchNewUI($event)"
+
+        [isAbout]="isMenuAbout"
+        [isNewHome]="isMenuNewHome"
+        [isNewUI]="isMenuNewUI"
+
+      ></app-menu>
+    
+    </div>
+    <!---          --->
+    <div class="cont2" *ngIf="isMenuAbout"  @myInsertRemoveTrigger >
+    
+      <app-about (sendAbout) = "catchAbout($event)"></app-about>
+    
+    </div>
+    <!---          --->
+    <div class="cont3" *ngIf="isMenuNewHome"  @myInsertRemoveTrigger>
+    
+      <app-new-home (sendNewHome) = "catchNewHome($event)"></app-new-home>
+    
+    </div>
+    <!---          --->
+    <div class="cont4" *ngIf="isMenuNewUI" @myInsertRemoveTrigger>
+    
+      <app-new-ui (sendNewUI) = "catchNewUI($event)"></app-new-ui>
+    
+    </div>
+  </nav>
+
+
+  <!-- <div class="home">
+    <div class="container">
+      <div class="box01">
+        
+      </div>
+      <div class="box02">
+        
+      </div>
+      <div class="box03">
+        
+      </div>
+      <div class="box04">
+        
+      </div>
+      <div class="box05">
+        
+      </div>
+    </div>
+  </div> -->
+  <!-- <app-form-write></app-form-write> -->
+
+
+
+
+</main>
+
+
+

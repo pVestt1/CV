@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+
+div.container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Titillium Web', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+  
+  
+    div.cont1 {
+        width: 100%;
+        height: 50%;
+        //background-color: rgb(0, 140, 255);
+        display: flex;
+
+        div.text1 {
+            width: 80%;
+            height: 100%;
+            //background-color: blueviolet;
+            text-align: center;
+            h1 {
+                padding-top: 70px;
+               font-size: 3em;
+            }
+            p {
+                text-align: right;
+                font-size: 1.2em;
+            }
+        }
+        div.foto {
+            width: 30%;
+            height: 100%;
+            padding-top: 3px;
+           // background-color: rgb(204, 195, 63);
+            //display: flex;
+            
+            div.img1 {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(255, 255, 255);
+                border-radius: 50%;
+                background: url(../../assets/foto/foto_person.jpg);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+               
+               
+            }
+           
+            div.img1::after {
+                content: "";
+                display: block;
+                width: 97%;
+                height: 97%;
+                //background-color: red;
+                border: 3px solid rgba(0, 183, 255, 0.548);
+                border-radius: 50%;
+                position: relative;
+                top: -100%;
+                
+                
+            }
+            div.img1::before {
+                content: "";
+                display: block;
+                width: 97%;
+                height: 97%;
+                //background-color: red;
+                border: 3px solid rgba(228, 124, 27, 0.63);
+                border-radius: 50%;
+                animation:  border1  1.5s
+                ease-out
+                0s
+                alternate
+                infinite
+                none
+                running;
+            }
+            @keyframes border1 {
+                0% {
+                    border: 3px solid rgb(223, 171, 74);
+                }
+                50% {
+                    border: 3px solid rgb(180, 141, 34);
+                }
+                100%   {
+                    border: 3px solid rgb(255, 199, 15);
+                }
+            }
+           
+        }
+
+    }
+    /*----------------*/
+    div.cont2 {
+        width: 100%;
+        height: 50%;
+        //background-color: rgb(32, 112, 177);
+        display: flex;
+        border-top: 1px solid rgb(98, 194, 194);
+        margin-top: 5px;
+        section.sec1 {
+            width: 50%;
+            height: 100%;
+            //background-color: darkblue;
+            text-align: center;
+            position: relative;
+            display: grid;
+            place-content: center;
+           
+           
+         /*------------*/
+    a {
+        padding: 5px 45px;
+        border: none;
+        border-radius: 1%;
+        background-color: rgba(255, 235, 205, 0);
+        transition-duration: .3s;
+        z-index: 2;
+        position: relative;
+        //left: 50px;
+        //top: -50px;
+        font-size: 1.5em;
+        font-weight: bolder;
+        letter-spacing: .5px;
+        font-variant: small-caps slashed-zero;
+        font-family: 'Titillium Web', sans-serif;
+        cursor: pointer;
+        animation: 3.2s linear btn_opacity;
+        margin-bottom: 10px;
+    }
+    
+    a:hover {
+        background: rgba(0, 0, 0, 0.274);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.336) 0%, rgba(20,158,244,0.36458333333333337) 100%);
+    }
+    @keyframes btn_opacity {
+        0% {
+            opacity: 0;
+        }   
+        100% {
+            opacity: 1;
+        }
+    }
+    a:hover::after { 
+
+        animation:  but1 1s linear 0s alternate infinite none running ;
+        transition-duration: .2;
+        
+    }
+    a::after {
+        content: "";
+        display: inline-block;
+        padding-left: 20px;
+        width: 90px;
+        height: 1px;
+        background-color: rgba(255, 0, 0, 0);
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        transition-duration: .2;
+       
+    }
+    a::before {
+        content: "";
+        display: inline-block;
+        padding-left: 20px;
+        width: 100px;
+        height: 1px;
+        background-color: rgb(150, 54, 54);
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        transition-duration: .2;
+       
+    }
+    a:hover::before {
+        height: 0px;
+        transition-duration: .2;
+    }
+    @keyframes but1 {
+        0% {
+            
+            transform: translateX(0px);
+            opacity: 0;
+            background-color: black;
+            width: 20px;
+           
+        }
+        100% {
+            transform: translateX(50px);
+            opacity: 1;
+            background-color: white;
+           
+        }
+    }
+    /*-------------------*/
+            .ngif_1 {
+                //width: 100px;
+               // height: 400px;
+                //background-color: red;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 10px;
+                a {
+                    font-size: 1em;
+                    border-bottom: 1px solid rgba(255, 0, 0, 0);
+                    cursor: pointer;
+                   background: none;
+                }
+                a:hover {
+                    border-bottom: 1px solid rgb(0, 0, 0);
+                }
+            }
+        }
+        /*-------------*/
+        section.sec2 {
+            width: 50%;
+            height: 100%;
+            //background-color: darkblue;
+            font-size: 1.2em;
+            background-color: rgba(0, 0, 0, 0.089);
+            padding-left: 10%;
+            ul {
+                list-style: none;
+                padding-top: 35px;
+                position: relative;
+                //left: 250px;
+                animation: 1.7s linear btn_opacity;
+                overflow: hidden;
+                span {
+                    padding-right: 20px;
+                   
+                    transition-duration: 1s;
+                    display: inline-block;
+                    position: relative;
+                   
+         
+                }
+                strong {
+                    padding-right: 10px;
+                    display: inline-block;
+                    a {
+                        text-decoration: none;
+                        display: inline-block;
+                    }
+                }
+              
+            }
+
+        }
+    }
+ 
+}
